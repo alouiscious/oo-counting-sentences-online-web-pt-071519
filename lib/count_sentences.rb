@@ -20,15 +20,16 @@ class String
     sentences = []
     
     
-    # spliters.each do |spliter|
-    #   if self.end_with?(".", "?", "!", "!!", "...")
-    #     self.squeeze(spliter)
+    spliters.each do |spliter|
+      if self.end_with?(".", "?", "!", "!!", "...")
+        self.squeeze(spliter)
         sentences << self.split(/\b[.|?|!]/)
+        sentences << self.scan(/\b[.|?|!]/)
+
         # sentences << self.split("?")
         # sentences << self.split("!")
-    #   end
-    # end
-    sentences << self.scan(/\b[.|?|!]/)
+      end
+    end
 # binding.pry   
     sentences 
     sentences.count
