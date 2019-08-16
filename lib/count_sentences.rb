@@ -23,7 +23,7 @@ class String
     spliters.each do |spliter|
       if self.end_with?(".", "?", "!", "!!", "...")
         self.squeeze(spliter)
-        sentences << self.split(/\b[.|?|!]/)
+        # sentences << self.split(/\b[.|?|!]/)
         sentences << self.scan(/\b[.|?|!]/)
 
         # sentences << self.split("?")
