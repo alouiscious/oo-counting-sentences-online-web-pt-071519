@@ -28,7 +28,7 @@ class String
         # sentences << self.split("!")
       end
     end
-    sentences << self.scan(\b[.|?|!])
+    sentences << self.scan(/\b[.|?|!]/)
 # binding.pry   
     sentences 
     sentences.count
